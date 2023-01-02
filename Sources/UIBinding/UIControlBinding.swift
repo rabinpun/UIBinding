@@ -28,7 +28,7 @@ public class UIControlBinding<T: UIControl,V>: Publisher, Binding {
     
     typealias ValueType = V
     
-    var value: V {
+    public var value: V {
         get {
             binder.publisher.value
         }
