@@ -15,6 +15,9 @@ protocol Binding {
 
 @available(iOS 13.0, *)
 public class UIControlBinding<T: UIControl,V>: Publisher, Binding {
+    
+    public init() {}
+    
     public func receive<S>(subscriber: S) where S : Subscriber, Never == S.Failure, V == S.Input {
         binder.publisher.receive(subscriber: subscriber)
     }
