@@ -1,5 +1,5 @@
 //
-//  ControlBinding.swift
+//  UIControlBinding.swift
 //  
 //
 //  Created by ebpearls on 02/01/2023.
@@ -40,7 +40,7 @@ public class UIControlBinding<T: UIControl,V>: Publisher, Binding {
     
     var binder: ControlBinder<T,V>!
     
-    func bind(_ controlBinder: ControlBinder<T,V>) {
+    public func bind(_ controlBinder: ControlBinder<T,V>) {
         binder = controlBinder
     }
     
